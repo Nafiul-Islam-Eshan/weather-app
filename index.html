@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Tailwind and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custome css -->
+    <link rel="stylesheet" href="./Styles/styles.css">
+
+    <!-- Geist font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-[#222] min-h-screen flex justify-center items-center">
+    <!-- Weather Display Card -->
+    <div
+        class=" w-11/12 max-w-[470px] bg-linear-135 from-[#00feba] to-[#5b548a] text-white rounded-[20px] text-center px-3 py-10 flex flex-col justify-center items-center ">
+        <!-- Imput section -->
+        <div class="join">
+            <div>
+                <label class="input join-item">
+                    <input type="text" placeholder="Search City" spellcheck="false"
+                        class="placeholder:text-slate-600 text-black" />
+                </label>
+            </div>
+            <button class="btn btn-neutral join-item"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Weather icon, tempurature, city -->
+         <div class="mb-2">
+            <!-- weather icon -->
+            <img class="w-32 sm:w-50" src="./weather-app-img/clear.png" alt="">
+            <!-- tempurature -->
+            <h1 class="text-5xl font-bold"><span id="celsiusTemp">22</span>°C</h1>
+            <!-- city -->
+            <h2 id="city" class="text-2xl font-semibold">Dhaka</h2>
+        </div>
+        <!-- Weather deatails - humanity, wind speed -->
+         <div class="flex justify-between w-full sm:w-11/12 items-center">
+            <!-- Humanity -->
+            <div class="flex gap-1">
+                <img class="w-10 sm:w-13" src="./weather-app-img/humidity.png" alt="">
+                <div class="">
+                    <p class=""><span id="humanity">70</span>%</p>
+                    <p class="">Humanity</p>
+                </div>
+            </div>
+            <!-- Wind Speed -->
+            <div class="flex gap-3">
+                <img class="w-10 sm:w-13" src="./weather-app-img/wind.png" alt="">
+                <div class="">
+                    <p class=""> <span id="windSpeed">5</span> km/h</p>
+                    <p class="">Wind Speed</p>
+                </div>
+            </div>
+         </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
